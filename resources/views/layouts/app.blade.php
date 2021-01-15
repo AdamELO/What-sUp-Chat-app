@@ -48,50 +48,14 @@
         @endguest
     </ul>
   </nav>
-
-  {{-- <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div>
   
-  <aside id="aside" class="h-24 w-16 bg-red-100 ml-5 p-5">
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">></span>
-  </aside> --}}
-  
-  <script>
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
-  </script>
 
-
-  {{-- <script>
-    $('.ulmenu ').on('click', function() {
-        $('.menuli').toggle();
-        $('.icone').toggleClass('fa-caret-down fa-caret-up');
-    });
-
-</script> --}}
-
-  {{-- <script>
-    $('#menuBtn').on('click',function(){
-        $('#respMenu').toggle()
-        $('.menu').toggle();
-        $('.closeMenu').toggle();
-    })
-</script> --}}
 
     {{ $slot }}
 
     @livewireScripts
     <script src="/js/app.js" data-turbolinks-track="reload"></script>
+    <script src="/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false"></script>
     
 </body>

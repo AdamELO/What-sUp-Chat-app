@@ -4,10 +4,10 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class Sidenav extends Component
+class Menu extends Component
 {
     public function render()
     {
-        return view('livewire.sidenav');
+        return view('livewire.menu');
     }
 }

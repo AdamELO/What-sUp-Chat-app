@@ -55,61 +55,31 @@ class User extends Authenticatable {
 
     function friendsOfMine() {
         return $this->belongsToMany( 'App\Models\User', 'friends_users', 'user_id', 'friend_id' )
-        ->wherePivot( 'accepted', '=', 1 ) // to filter only accepted
-        ->withPivot( 'accepted' );
-        // or to fetch accepted value
+        ->wherePivot( 'accepted', '=', 1 );
     }
     function friendsOfMineRequested() {
         return $this->belongsToMany( 'App\Models\User', 'friends_users', 'user_id', 'friend_id' )
-        ->wherePivot( 'accepted', '=', 0 )
-        ->withPivot( 'accepted' );
+        ->wherePivot( 'accepted', '=', 0 );
     }
 
     // friendship that I was invited to
 
     function friendOf() {
         return $this->belongsToMany( 'App\Models\User', 'friends_users', 'friend_id', 'user_id' )
-        ->wherePivot( 'accepted', '=', 1 )
-        ->withPivot( 'accepted' );
+        ->wherePivot( 'accepted', '=', 1 );
     }
     function friendOfRequested() {
         return $this->belongsToMany( 'App\Models\User', 'friends_users', 'friend_id', 'user_id' )
-        ->wherePivot( 'accepted', '=', 0 )
-        ->withPivot( 'accepted' );
+        ->wherePivot( 'accepted', '=', 0 );
     }
-    // friendship relations for wheredoesnthave
-    function mesamis() {
+
+    // friendship for wheredoesnthave
+    function myFriendswdh() {
         return $this->belongsToMany( 'App\Models\User', 'friends_users', 'user_id', 'friend_id' );
     }
-    function moiamis() {
+    function friendOfwdh() {
         return $this->belongsToMany( 'App\Models\User', 'friends_users', 'friend_id', 'user_id' );
     }
 
 
-    // accessor allowing you call $user->friends
-
-    public function getFriendsAttribute() {
-        if ( ! array_key_exists( 'friends_users', $this->relations ) ) $this->loadFriends();
-
-        return $this->getRelation( 'friends' );
-    }
-
-    protected function loadFriends() {
-        if ( ! array_key_exists( 'friends_users', $this->relations ) ) {
-            $friends = $this->mergeFriends();
-
-            $this->setRelation( 'friends_users', $friends );
-        }
-    }
-
-    protected function mergeFriends() {
-        return $this->friendsOfMine->merge( $this->friendOf );
-    }
-
 }
-// $related = new Collection();
-
-// foreach ($question->tags as $tag)
-// {
-//     $related = $related->merge($tag->questions);
-// }
