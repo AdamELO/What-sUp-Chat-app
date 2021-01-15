@@ -39,16 +39,15 @@ class Chat extends Component
         $this->validate([
             "message" => "required"
         ]);
+
         $this->emit('messageSent');
-        $data = [
-            "user" => $this->user,
-            "message" => $this->message
-        ];
-        // $this->emit( 'getMessage', $this->message );
-        $this->emit( 'getMessage', $data);
-        // event(new ChatEvent($this->message, $this->user));
-        $this->resetFilters();
+
         // $this->emit('scrollLi');
+        // $this->emit( 'getMessage', $data);
+
+        event(new ChatEvent($this->message, $this->user));
+        
+        $this->resetFilters();
     }
     public function render()
     {

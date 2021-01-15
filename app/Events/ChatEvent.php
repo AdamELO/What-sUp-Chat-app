@@ -23,16 +23,16 @@ class ChatEvent implements ShouldBroadcast
      *
      * @return void
      */
-    public function __construct($message, User $user)
+    public function __construct($message, $user)
     {
         $this->message = $message;
-        $this->user = $user->name;
+        $this->user = $user;
     }
 
     
     public function broadcastOn()
     {
-        return new channel('chat');
+        return 'chat';
     }
     public function broadcastAs(){
         return 'chatevent';
