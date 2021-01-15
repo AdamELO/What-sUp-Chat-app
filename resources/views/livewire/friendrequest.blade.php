@@ -34,7 +34,6 @@
                             friends</a></li>
                     <li class="p-3 w-3/4 menuli mx-auto liChat rounded-lg bg-white"><a href="/friendrequest">Pending friend
                             request</a></li>
-                    <li class="p-3 w-3/4 menuli mx-auto liChat rounded-lg bg-white"><a href="/">Buy Premium</a></li>
                 </ul>
             </div>
         </div>

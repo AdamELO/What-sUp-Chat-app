@@ -22,7 +22,11 @@ Route::get('/dashboardhome',App\Http\Livewire\Dashhome::class)->name('dashhome')
 Route::get('/addfriend',App\Http\Livewire\Addfriend::class)->name('addfriend');
 Route::get('/friendrequest',App\Http\Livewire\Friendrequest::class)->name('friendrequest');
 Route::get('/friendlist',App\Http\Livewire\Friendlist::class)->name('friendlist');
+Route::get('/chat',App\Http\Livewire\Chat::class)->name('chat');
 
+// Route::get('/chat',function(){
+//     return view('chat');
+// })->middleware(['auth']);
 
 // ->middleware('auth')
 

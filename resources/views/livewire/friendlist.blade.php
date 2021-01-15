@@ -10,7 +10,7 @@
                         <div class="items-center flex">
                             <img width="100px" height="100px" class="rounded-full" src="./img/{{$user->avatar}}" alt="avatar friend">
                             <h1 class="mr-2">{{ $user->name }}</h1>
-                            <button class="bg-green-200 ml-2">Chat</button>
+                            <button class="bg-green-200 ml-2"> <a href="/chat">Chat</a> </button>
                             {{-- <button class="bg-red-200 ml-2">remove friend</button> --}}
                         </div>
                         <hr class="w-4/5 mb-10" style="border: solid 2px #fdba8c">
@@ -28,7 +28,6 @@
                         friends</a></li>
                 <li class="p-3 w-3/4 menuli mx-auto liChat rounded-lg bg-white"><a href="/friendrequest">Pending friend
                         request</a></li>
-                <li class="p-3 w-3/4 menuli mx-auto liChat rounded-lg bg-white"><a href="/">Buy Premium</a></li>
             </ul>
         </div>
     </div>

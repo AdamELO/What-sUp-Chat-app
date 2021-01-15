@@ -7,7 +7,6 @@
             <p class="my-5 text-bold">Friends: 10</p>
             <p class="my-5 text-bold">Messages waiting: 10</p>
             <p class="my-5 text-bold">Pending friend request: 10</p>
-            <p class="my-5 text-bold">Premium user: No</p>
         </div> --}}
         {{-- {{$slot}} --}}
         @if (\Request::is('dashboard'))
@@ -20,7 +19,6 @@
                 <li class="p-3 w-3/4 menuli mx-auto liChat rounded-lg bg-white"><a href="/friendlist">My Friends</a></li>
                 <li class="p-3 w-3/4 menuli mx-auto liChat rounded-lg bg-white"><a href="/addfriend">Add friends</a></li>
                 <li class="p-3 w-3/4 menuli mx-auto liChat rounded-lg bg-white"><a href="/friendrequest">Pending friend request</a></li>
-                <li class="p-3 w-3/4 menuli mx-auto liChat rounded-lg bg-white"><a href="/">Buy Premium</a></li>
             </ul>
         </div>
     </div>

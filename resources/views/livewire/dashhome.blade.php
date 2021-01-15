@@ -5,5 +5,4 @@
     <p class="my-5 text-bold">Friends: 10</p>
     <p class="my-5 text-bold">Messages waiting: 10</p>
     <p class="my-5 text-bold">Pending friend request: 10</p>
-    <p class="my-5 text-bold">Premium user: No</p>
 </div>
