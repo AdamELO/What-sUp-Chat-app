@@ -27,11 +27,11 @@
         </div>
         @endif
     </div>
-    <script>
+    {{-- <script>
         $('.ulmenu ').on('click', function() {
             $('.menuli').toggle();
             $('.icone').toggleClass('fa-caret-down fa-caret-up');
         });
 
-    </script>
+    </script> --}}
 </div>
