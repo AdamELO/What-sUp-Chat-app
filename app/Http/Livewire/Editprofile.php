@@ -17,7 +17,11 @@ class Editprofile extends Component
     use WithFileUploads;
 
     public function profileEdit(){
-
+        $this->validate( [
+            'name'=>'required',
+            'email'=>'required|email',
+            'password'=>'required'
+        ] );
         $user = User::find( Auth::id() );
         $user->name = $this->name;
         $user->email = $this->email;

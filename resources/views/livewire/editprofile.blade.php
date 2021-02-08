@@ -13,10 +13,13 @@
                         <input
                             class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
                             type="text" placeholder={{ Auth::user()->name }} wire:model='name'>
+                        @error('name') <span class="error mb-4 text-red-400">{{ $message }}</span> @enderror
                         <label for="email"
                             class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Email</label>
                         <input type="email" placeholder={{ Auth::user()->email }} wire:model='email'
                             class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3">
+                        @error('email') <span class="error mb-4 text-red-400">{{ $message }}</span> @enderror
+
                         <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
                             for="password">
                             Password
@@ -24,6 +27,8 @@
                         <input
                             class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
                             type="password" placeholder="***" wire:model='password'>
+                        @error('password') <span class="error mb-4 text-red-400">{{ $message }}</span> @enderror
+
                         <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
                             for="avatar">
                             Avatar
