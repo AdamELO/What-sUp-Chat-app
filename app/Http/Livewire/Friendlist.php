@@ -6,11 +6,14 @@ use App\Models\FriendsUsers;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Friendlist extends Component
 {
-    public $users;
-    public function mount()
+    use WithPagination;
+    public $searchFriend = '';
+
+    public function render()
     {
         $myFriends = FriendsUsers::where('user_id',Auth::id())->where('accepted',1)->get();
         $imFriend = FriendsUsers::where('friend_id',Auth::id())->where('accepted',1)->get();
@@ -22,10 +25,9 @@ class Friendlist extends Component
             array_push($alreadyFriendOrRequested,$imFriend[$i]['user_id']);
         }
 
-        $this->users = User::where( 'id', '!=', Auth::id() )->whereIn('id',$alreadyFriendOrRequested)->get();
-    }
-    public function render()
-    {
-        return view('livewire.friendlist');
+        return view('livewire.friendlist', [
+            'users' => User::where( 'id', '!=', Auth::id() )->whereIn('id',$alreadyFriendOrRequested)->where('name', 'like', '%'.$this->searchFriend.'%')->paginate(2),
+        ]);
+
     }
 }

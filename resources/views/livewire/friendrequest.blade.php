@@ -11,10 +11,10 @@
                         <div class="flex my-4">
                             <h1 class="mr-2 mt-1">{{ $friend->name}}</h1>
                             <form wire:submit.prevent='acceptRequest({{$friend->id}})'>
-                                <button type="submit" class="bg-green-200 ml-2 px-2 py-1">Accept</button>
+                                <button type="submit" class="px-2 py-1 rounded-xl bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg">Accept</button>
                             </form>
                             <form wire:submit.prevent='denyRequest({{$friend->id}})'>
-                                <button type="submit" class="bg-red-200 ml-2 px-2 py-1">Deny</button>
+                                <button type="submit" class="px-2 py-1 rounded-xl bg-red-300 text-red-600 max-w-max shadow-sm hover:shadow-lg">Deny</button>
                             </form>
                         </div>
                     @endforeach
@@ -24,13 +24,6 @@
                 </div>
             </div>
             @livewire('menu')
-        </div>
-        <div>
-            @if(\Session::has('success'))
-            <div class='text-green-400 bg-green-200 text-center'>
-                {{\Session::get('success')}}
-            </div>
-            @endif
         </div>
     </div>
 </div>

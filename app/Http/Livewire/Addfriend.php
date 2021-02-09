@@ -9,6 +9,7 @@ use Livewire\WithPagination;
 
 class Addfriend extends Component {
     use WithPagination;
+    public $searchPeople;
     
     public function addFriend( $id ) {
         $user = User::find(Auth::id());
@@ -22,7 +23,7 @@ class Addfriend extends Component {
         })
         ->whereDoesntHave('friendOfwdh', function ($query) {
             $query->where('user_id', Auth::id());
-        })->paginate(2);
+        })->where('name', 'like', '%'.$this->searchPeople.'%')->paginate(2);
         return view( 'livewire.addfriend', ['users' => $users] );
     }
 }
