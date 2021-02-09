@@ -13,7 +13,7 @@
                 </p>
                 <button
                     class="mx-auto lg:mx-0 text-white font-bold focus:outline-none hover:shadow-lg rounded my-2 md:my-6 py-4 px-8 w-48 bg-orange-300">
-                   <a href="/login">Get Started</a>
+                   <a href="/dashboard">Get Started</a>
                 </button>
             </div>
         </div>
