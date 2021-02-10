@@ -8,6 +8,9 @@
 .bg-orange-300 {
     background-color: #fdba8c;
 }
+.border-orange-300 {
+    border: solid 1px #fdba8c;
+}
 
 .text-orange-300 {
     color: #fdba8c;

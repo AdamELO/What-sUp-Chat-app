@@ -1,12 +1,12 @@
 <div>
-    <div class="container mx-auto text-center">
-        <div class="flex flex-col w-1/3 mx-auto text-left">
-            <div class="chatbanner p-3">Chat Room</div>
+    <div class="mx-auto text-center bg-gray-100 rounded-lg">
+        <div class="flex flex-col mx-auto text-left">
+            <div class="chatbanner p-3 rounded-sm">Chat Room With Your Friend : ...</div>
             <ul class="list-none ulChat">
                 @livewire('message')
             </ul>
             <input type="text" name="message" wire:model="message" wire:keydown.enter="sendMessage"
-                class="mt-2 px-4 py-2 outline-blue focus:bg-green-200" placeholder="Type your message here ...">
+                class="outline-blue focus:bg-blue-100" placeholder="Type your message here ...">
             @error('message')
                 <p class="text-red-600 my-2">{{ $message }}</p>
             @enderror

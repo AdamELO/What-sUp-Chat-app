@@ -22,4 +22,5 @@ Route::get('/editprofile',App\Http\Livewire\Editprofile::class)->name('edit');
 Route::get('/addfriend',App\Http\Livewire\Addfriend::class)->name('addfriend');
 Route::get('/friendrequest',App\Http\Livewire\Friendrequest::class)->name('friendrequest');
 Route::get('/friendlist',App\Http\Livewire\Friendlist::class)->name('friendlist');
-Route::get('/chat',App\Http\Livewire\Chat::class)->middleware(['auth'])->name('chat');
+// Route::get('/chat',App\Http\Livewire\Chat::class)->middleware(['auth'])->name('chat');
+Route::get('/uichat',App\Http\Livewire\Uichat::class)->middleware(['auth'])->name('chat');
