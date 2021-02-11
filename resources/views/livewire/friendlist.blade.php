@@ -1,34 +1,24 @@
-<div class="log-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0">
-    <div class="max-w-4xl flex container mx-auto mt-5">
-        <div class="w-3/5 p-5 m-3 bg-white">
-            <div class="w-3/5 p-5 m-3 bg-white">
-                <h1 class="text-orange-300">{{ Auth::user()->name }}</h1>
-                <hr class="w-4/5 mb-10" style="border: solid 2px #fdba8c">
-                <div>
-                    <span class="mr-2">&#128270;</span>
-                    <input type="search" wire:model='searchFriend' class=" mb-8 border-2 border-orange-300 focus:border-orange-300 shadow rounded p-3" placeholder="Search by name...">
+<div>
+    <div class="rounded-lg bg-gray-100 mx-2">
+        <div class="my-3 flex justify-center mt-5">
+            <h1 class="mt-1">My Friends &nbsp;</h1>
+            <span
+                class="inline-flex items-center justify-center px-2 py-1 mr-2 mt-1 text-xs text-black bg-gray-300 rounded-full">
+                {{ count($friends) }}
+            </span>
+        </div>
+        <div class="mx-2">
+            @foreach ($friends as $friend)
+                <div class="flex my-3 flex justify-between items-center">
+                    <img width="50px" height="50px" class="rounded-full" src="./img/{{ $friend->avatar }}"
+                        alt="avatar friend">
+                    <h1 class="ml-3 inline-flex items-center justify-center text-gray-600">
+                        {{ $friend->name }}
+                    </h1>
+                    <span class="bg-green-500 rounded-full px-1 py-1 inline-flex items-center justify-center"></span>
                 </div>
-                <h2 class="subheader">My friends</h2>
-                @foreach ($users as $user)
-                    <div class="my-4">
-                        <div class="items-center flex">
-                            <img width="100px" height="100px" class="rounded-full" src="./img/{{$user->avatar}}" alt="avatar friend">
-                            <h1 class="mr-2">{{ $user->name }}</h1>
-                            <button class="px-2 py-1 rounded-xl bg-green-300 text-green-600 max-w-max shadow-sm hover:shadow-lg"> <a href="/uichat">Chat</a> </button>
-                        </div>
-                        <hr class="w-4/5 mb-10" style="border: solid 2px #fdba8c">
-                    </div>
-                @endforeach
-            </div>
-            {{$users->links()}}
+            @endforeach
         </div>
-        @livewire('menu')
-    </div>
-    <div>
-        @if(\Session::has('success'))
-        <div class='text-green-400 bg-green-200 text-center'>
-            {{\Session::get('success')}}
-        </div>
-        @endif
+        {{ $friends->links() }}
     </div>
 </div>

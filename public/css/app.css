@@ -92,3 +92,8 @@
 .colorMessageReceiver{
     background-image: linear-gradient(120deg, #fdba8c 0%, #ebcab4 100%);
 }
+
+/* input seaerch */
+input[type=search]:focus {
+    outline: none
+}

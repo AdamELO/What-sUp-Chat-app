@@ -11,7 +11,6 @@ use Livewire\WithPagination;
 class Friendlist extends Component
 {
     use WithPagination;
-    public $searchFriend = '';
 
     public function render()
     {
@@ -26,7 +25,7 @@ class Friendlist extends Component
         }
 
         return view('livewire.friendlist', [
-            'users' => User::where( 'id', '!=', Auth::id() )->whereIn('id',$alreadyFriendOrRequested)->where('name', 'like', '%'.$this->searchFriend.'%')->paginate(2),
+            'friends' => User::where( 'id', '!=', Auth::id() )->whereIn('id',$alreadyFriendOrRequested)->paginate(2),
         ]);
 
     }
