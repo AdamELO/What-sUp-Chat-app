@@ -1,6 +1,6 @@
     <div>
         <div>
-            <h1 class="my-2 text-center">Find your friends now !!!</h1>
+            <h1 class="my-2 text-center text-orange-300 underline">Find your friends</h1>
             <input type="search" wire:model='searchPeople'
                 class=" mb-8 w-4/5 flex mx-auto border-2 border-orange-300 p-2" placeholder="Search by name...">
             <div class="rounded-lg w-2/3 flex flex-col mx-auto">

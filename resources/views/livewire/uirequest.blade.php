@@ -3,8 +3,8 @@
         <div class="row-span-3 rounded-lg bg-blue-100 mx-2">
             @livewire('friendlist')
         </div>
-        <div class="col-span-3" style="height: 80vh">
-            @livewire('chat')
+        <div class="col-span-3 bg-gray-100 rounded-lg" style="height: 80vh">
+            @livewire('friendrequest')
         </div>
         <div class="row-span-3 rounded-lg bg-blue-100 mx-2">
             @livewire('menu')

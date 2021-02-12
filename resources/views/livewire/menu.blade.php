@@ -16,9 +16,10 @@
         </div>
     </div>
     <div class="p-5 mx-auto text-center rounded-lg">
-        <ul class="list-none ulChat text-orange-300">
+        <ul class="text-orange-300">
             <li class="p-3 menuli mx-auto liChat rounded-lg bg-white"><a href="/addfriend"><i class="fas fa-user-plus color-orange-300"></i> &nbsp;Add friends</a></li>
             <li class="p-3 menuli mx-auto liChat rounded-lg bg-white"><a href="/friendrequest"><i class="fas fa-id-badge color-orange-300"></i>&nbsp;Pending friend request</a></li>
         </ul>
     </div>
+    <img src="./img/addfriend.png" width="340px" height="340px" class="mx-auto rounded-lg">
 </div>

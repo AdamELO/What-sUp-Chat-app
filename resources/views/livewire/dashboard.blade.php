@@ -1,7 +1,15 @@
-<div class="log-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0">
-    <div class="max-w-4xl flex container mx-auto mt-5">
-        @livewire('dashhome')
-        @livewire('menu')
+<div>
+    <div class="grid grid-rows grid-flow-col mt-2">
+        <div class="row-span-3 rounded-lg bg-blue-100 mx-2">
+            @livewire('friendlist')
+        </div>
+        <div class="col-span-3 bg-gray-100 rounded-lg" style="height: 80vh">
+            @livewire('dashhome')
+        </div>
+        <div class="row-span-3 rounded-lg bg-blue-100 mx-2">
+            @livewire('menu')
+        </div>
     </div>
 </div>
+
 
