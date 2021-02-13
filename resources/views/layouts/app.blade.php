@@ -10,7 +10,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     {{-- <script src="/js/app.js" defer data-turbolinks-track="reload"></script> --}}
+    <link rel="stylesheet" href="./owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./owl.carousel/dist/assets/owl.theme.default.min.css" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="./owl.carousel/dist/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="./css/app.css">
     @livewireStyles
 </head>
