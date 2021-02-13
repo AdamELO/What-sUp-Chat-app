@@ -6,7 +6,7 @@
         <div class="w-1/2 flex">
             <div class="flex justify-center items-center flex-col px-3 lg:px-0">
                 <h1 class="my-4 text-2xl md:text-3xl lg:text-4xl font-black leading-tight">
-                    <span class="text-white bg-orange-300 py-3 px-1">What's up</span> is a Free Friend Chat App
+                    <span class="text-white bg-orange-300 py-1 px-1">What's up is a Free Friend Chat App</span>
                 </h1>
                 <p class="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8">
                     Invite your friends now and send them your messages!!!
@@ -24,7 +24,7 @@
         <section class="bg-white py-8">
             <div class="container max-w-5xl mx-auto m-8">
                 <h2 class="w-full my-2 text-5xl font-black leading-tight text-center text-orange-300">
-                    Why is <span class="text-white bg-teal-300 py-3 px-1">What's up</span> the best chat application
+                    Why is What's up the best chat application
                 </h2>
                 <div class="w-full mb-4">
                     <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
