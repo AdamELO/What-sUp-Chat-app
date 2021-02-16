@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -17,6 +18,11 @@ class Login extends Component {
             'form.password'=>'required'
         ] );
         Auth::attempt( $this->form );
+        if(Auth::check()){
+            $user = User::find( Auth::id() );
+            $user->status = 1;
+            $user->save();
+        }
 
         return redirect( route( 'dashboard' ) );
     }
