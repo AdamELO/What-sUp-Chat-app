@@ -1,10 +1,7 @@
 <div>
     <div
         class="bg-orange-300 shadow-lg w-3/4 mx-auto my-2 flex justify-center items-center flex-col rounded-lg relative">
-        <label class="switch" data-role="toggle-spoil">
-            <input type="checkbox" {{ Auth::user()->status == 0 ? 'checked' : '' }}>
-            <div class="rounded"></div>
-        </label>
+        @livewire('status')
         @if (Storage::disk('public')->has(Auth::user()->avatar))
             <img class="rounded-full w-12 h-12 mt-2" src="{{ asset('storage/' . Auth::user()->avatar) }}" alt="">
         @else

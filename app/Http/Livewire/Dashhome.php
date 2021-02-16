@@ -10,7 +10,7 @@ class Dashhome extends Component
 {
     public $nbFriends;
     public $nbRequests;
-    // public $nbMessages;
+    public $status;
 
     public function mount()
     {   
@@ -29,6 +29,11 @@ class Dashhome extends Component
 
         //nb friend requests pending
         $this->nbRequests = count(Auth::user()->friendOfRequested);
+        //status
+        $this->status = Auth::user()->status;
+    }
+    public function hydrate(){
+        $this->status = Auth::user()->status;
     }
     public function render()
     {
