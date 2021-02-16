@@ -20,6 +20,6 @@ $(document).ready(function(){
         items: 1,
         center:true,
         dots:false,
-        autoplay:true,
+        autoplay:false,
     });
 });

@@ -135,8 +135,32 @@ input[type=search]:focus {
     left: 25px;
 }
 
-/* carousel */
+/* Owl carousel */
 .owl-carousel{
     width: 270px;
     height: 270px;
+}
+.owl-prev {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%!important;
+    position: absolute;
+    top: 25%;
+    left: -20px;
+    background-color: #fdba8c!important;
+    outline: none!important;
+}
+
+.owl-next {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%!important;
+    position: absolute;
+    top: 25%;
+    right: -20px;
+    background-color: #fdba8c!important;
+    outline: none!important;
+}
+.item img{
+    height: 179px!important;
 }

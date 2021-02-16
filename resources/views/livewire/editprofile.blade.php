@@ -1,7 +1,6 @@
 <div>
-    <div class="w-3/5 p-5 mt-5 mx-auto bg-white rounded-lg">
-        <h1 class="text-orange-300">Edit your profile</h1>
-        <hr class="w-4/5 mb-10" style="border: solid 2px #fdba8c">
+    <div class="w-4/5 p-5 mt-5 mx-auto bg-white rounded-lg">
+        <h1 class="my-1 text-center text-orange-300 underline">Edit your profile</h1>
         <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3 mb-6 md:mb-0">
                 <form wire:submit.prevent='profileEdit' enctype="multipart/form-data">
