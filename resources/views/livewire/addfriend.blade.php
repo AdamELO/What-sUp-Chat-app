@@ -22,6 +22,8 @@
                     </ul>
                 @endforeach
             </div>
+            <div class="mx-auto flex justify-center">
+                {{ $users->links() }}
+            </div>
         </div>
-        {{ $users->links() }}
     </div>

@@ -23,7 +23,7 @@ class Addfriend extends Component {
         })
         ->whereDoesntHave('friendOfwdh', function ($query) {
             $query->where('user_id', Auth::id());
-        })->where('name', 'like', '%'.$this->searchPeople.'%')->paginate(2);
+        })->where('name', 'like', '%'.$this->searchPeople.'%')->orderBy('name')->paginate(3);
         return view( 'livewire.addfriend', ['users' => $users] );
     }
 }

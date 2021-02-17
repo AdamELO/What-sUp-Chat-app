@@ -25,7 +25,7 @@ class Friendlist extends Component
         }
 
         return view('livewire.friendlist', [
-            'friends' => User::where( 'id', '!=', Auth::id() )->whereIn('id',$alreadyFriendOrRequested)->paginate(2),
+            'friends' => User::where( 'id', '!=', Auth::id() )->whereIn('id',$alreadyFriendOrRequested)->orderBy('name')->paginate(7),
         ]);
 
     }

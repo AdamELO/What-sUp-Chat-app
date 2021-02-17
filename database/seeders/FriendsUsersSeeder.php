@@ -29,6 +29,21 @@ class FriendsUsersSeeder extends Seeder {
             'accepted' => 1
         ] );
         DB::table( 'friends_users' )->insert( [
+            'friend_id' => 1,
+            'user_id' => 3,
+            'accepted' => 0
+        ] );
+        DB::table( 'friends_users' )->insert( [
+            'friend_id' => 1,
+            'user_id' => 4,
+            'accepted' => 0
+        ] );
+        DB::table( 'friends_users' )->insert( [
+            'friend_id' => 1,
+            'user_id' => 5,
+            'accepted' => 0
+        ] );
+        DB::table( 'friends_users' )->insert( [
             'friend_id' => 2,
             'user_id' => 4,
             'accepted' => 0

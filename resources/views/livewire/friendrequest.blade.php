@@ -4,7 +4,7 @@
         <h1 class="my-1 text-center text-orange-300 underline">Friend Request</h1>
         <div class="w-3/5 mx-auto my-5">
             @if (count($user->friendOfRequested) != 0)
-            @foreach ($user->friendOfRequested as $friend)
+            @foreach ($user->friendOfRequested->sortBy('name') as $friend)
                 <ul class="flex flex-col m-3">
                     <li class="flex flex-row">
                         <div
@@ -23,7 +23,7 @@
                 </ul>
             @endforeach
             @else
-                <h2 class='text-red-400 mt-5'>No friend request yet</h2>
+                <h2 class='text-red-400 mt-5 text-center'>No friend request yet</h2>
             @endif
         </div>
     </div>
