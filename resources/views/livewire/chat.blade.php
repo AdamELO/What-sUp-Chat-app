@@ -1,18 +1,18 @@
 <div>
-    <div class="mx-auto text-center bg-gray-100 rounded-lg">
+    <div class=" w-3/5 mx-auto text-center bg-white rounded-lg border border-gray-200">
         <div class="flex flex-col mx-auto text-left">
             <div class="chatbanner p-3 rounded-sm">Chat Room With Your Friend : ...</div>
             <ul class="list-none ulChat">
                 @livewire('message')
             </ul>
             <input type="text" name="message" wire:model="message" wire:keydown.enter="sendMessage"
-                class="outline-blue focus:bg-blue-100" placeholder="Type your message here ...">
+                class="outline-blue focus:bg-blue-100 p-2 border border-blue-300" placeholder="Type your message here ...">
             @error('message')
                 <p class="text-red-600 my-2">{{ $message }}</p>
             @enderror
         </div>
     </div>
-    <div id="alertSuccessMsg" role="alert" class="bg-green-200 text-green-500 p-5 m-3">
+    <div id="alertSuccessMsg" role="alert" class="bg-green-200 text-green-500 p-5 m-3 z-20">
         Your message has been successfully sent
     </div>
     <script>

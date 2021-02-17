@@ -3,7 +3,7 @@
         <div class="col-span-2 rounded-lg bg-blue-100 mx-2">
             @livewire('friendlist')
         </div>
-        <div class="col-span-7 bg-gray-100 rounded-lg" style="height: 80vh">
+        <div class="col-span-7 bg-gray-100 rounded-lg">
             @livewire('addfriend')
         </div>
         <div class="col-span-3 rounded-lg bg-blue-100 mx-2">

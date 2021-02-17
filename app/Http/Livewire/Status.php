@@ -8,19 +8,20 @@ use Livewire\Component;
 
 class Status extends Component
 {
-    public $status;
+    public $user;
+    public function mount(){
+        $this->user = User::find( Auth::id() );
+    }
     public function hydrate(){
-        $this->status = Auth::user()->status;
+        $this->user = User::find( Auth::id() );
     }
     public function changeStatus(){
-        if (Auth::user()->status == 0) {
-            $user = User::find( Auth::id() );
-            $user->status = 1;
-            $user->save();
+        if ($this->user->status == 0) {
+            $this->user->status = 1;
+            $this->user->save();
         }else{
-            $user = User::find( Auth::id() );
-            $user->status = 0;
-            $user->save();
+            $this->user->status = 0;
+            $this->user->save();
         }
     }
 
