@@ -156,3 +156,19 @@ input[type=search]:focus {
 .item img{
     height: 179px!important;
 }
+
+/* edit msg success */
+
+.msgEdit{
+    opacity: 0!important;
+    animation: opa 5s linear!important
+}
+
+@keyframes opa {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
