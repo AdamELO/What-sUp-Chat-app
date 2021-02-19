@@ -9,16 +9,22 @@
         </div>
         <div class="mx-2">
             @foreach ($friends as $friend)
-            <a href="/uichat{{$friend->id}}">
-                <div class="flex my-3 flex justify-between items-center border border-orange-300 {{ Request::segment(1)=='uichat'.$friend->id ? 'bg-orange-300' : '' }} rounded-lg px-1 cursor-pointer">
-                    <img width="50px" height="50px" class="rounded-full" src="./img/{{ $friend->avatar }}"
-                        alt="avatar friend">
-                    <h1 class="ml-3 inline-flex items-center justify-center text-gray-600">
-                        {{ $friend->name }}
-                    </h1>
-                    @livewire('statuslist', ['friend' => $friend], key($friend->id))
-                </div>
-            </a>
+                <a href="/uichat{{ $friend->id }}">
+                    <div
+                        class="flex my-3 flex justify-between items-center border border-orange-300 {{ Request::segment(1) == 'uichat' . $friend->id ? 'bg-orange-300' : '' }} rounded-lg px-1 cursor-pointer">
+                        @if (Storage::disk('public')->has($friend->avatar))
+                            <img class="rounded-full w-12 h-12"
+                                src="{{ asset('storage/' . $friend->avatar) }}" alt="avatar friend">
+                        @else
+                            <img class="rounded-full w-12 h-12" src="./img/{{ $friend->avatar }}"
+                                alt="avatar friend">
+                        @endif
+                        <h1 class="ml-3 inline-flex items-center justify-center text-gray-600">
+                            {{ $friend->name }}
+                        </h1>
+                        @livewire('statuslist', ['friend' => $friend], key($friend->id))
+                    </div>
+                </a>
             @endforeach
         </div>
     </div>

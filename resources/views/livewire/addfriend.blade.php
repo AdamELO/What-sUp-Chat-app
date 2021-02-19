@@ -10,13 +10,19 @@
                         <li class="flex flex-row">
                             <div
                                 class="flex flex-1 items-center transition duration-500 ease-in-out justify-around transform hover:-translate-y-2 rounded-2xl border-2 p-3 hover:shadow-2xl border-orange-300">
-                                <img width="50px" height="50px" class="rounded-full" src="./img/{{ $user->avatar }}"
-                                    alt="avatar friend">
+                                @if (Storage::disk('public')->has($user->avatar))
+                                    <img class="rounded-full w-12 h-12"
+                                        src="{{ asset('storage/' . $user->avatar) }}" alt="avatar friend">
+                                @else
+                                    <img class="rounded-full w-12 h-12"
+                                        src="./img/{{ $user->avatar }}" alt="avatar friend">
+                                @endif
                                 <h1 class="text-gray-600">
                                     {{ $user->name }}
                                 </h1>
                                 <button wire:click='addFriend({{ $user->id }})'
-                                    class="rounded-lg p-1 bg-green-300 text-green-600">Add <i class="fas fa-user-plus"></i></button>
+                                    class="rounded-lg p-1 bg-green-300 text-green-600">Add <i
+                                        class="fas fa-user-plus"></i></button>
                             </div>
                         </li>
                     </ul>
