@@ -28,8 +28,8 @@
 
     {{ $slot }}
 
-    <script src="/js/main.js"></script>
     @livewireScripts
+    <script src="/js/main.js"></script>
     <script src="/js/app.js" data-turbolinks-track="reload"></script>
     <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js"
         data-turbolinks-eval="false"></script>

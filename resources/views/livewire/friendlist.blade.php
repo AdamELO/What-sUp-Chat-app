@@ -9,7 +9,7 @@
         </div>
         <div class="mx-2">
             @foreach ($friends as $friend)
-            <a href="/uichat">
+            <a wire:poll href="/uichat{{$friend->id}}">
                 <div class="flex my-3 flex justify-between items-center border border-orange-300 rounded-lg px-1 cursor-pointer">
                     <img width="50px" height="50px" class="rounded-full" src="./img/{{ $friend->avatar }}"
                         alt="avatar friend">

@@ -15,7 +15,7 @@
             <div class="border border-orange-300 rounded-lg p-2">
                 <img src="./img/status.png" class="h-32" alt="status_undraw">
                 <p class="my-5 text-bold text-center">Status: 
-                    <span class="p-2 rounded-full {{$user->status == 1 ? 'bg-green-200 text-green-500' : 'bg-red-200 text-red-500'}}">
+                    <span wire:poll class="p-2 rounded-full {{$user->status == 1 ? 'bg-green-200 text-green-500' : 'bg-red-200 text-red-500'}}">
                         {{$user->status == 1 ? 'Connected' : 'Absent'}}
                     </span>
                 </p>
