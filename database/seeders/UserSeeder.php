@@ -16,49 +16,49 @@ class UserSeeder extends Seeder {
         DB::table( 'users' )->insert( [
             'name' => 'Adam',
             'email' => 'adam@adam.com',
-            'password' => bcrypt( 'motdepasse123' ),
+            'password' => bcrypt( 'password123' ),
             'avatar' => 'avatar.jpg',
             'status' => 0,
         ] );
         DB::table( 'users' )->insert( [
             'name' => 'Alex',
             'email' => 'alex@alex.com',
-            'password' => bcrypt( 'motdepasse123' ),
+            'password' => bcrypt( 'password123' ),
             'avatar' => 'avatar.jpg',
             'status' => 0,
         ] );
         DB::table( 'users' )->insert( [
             'name' => 'Lisa',
             'email' => 'lisa@lisa.com',
-            'password' => bcrypt( 'motdepasse123' ),
+            'password' => bcrypt( 'password123' ),
             'avatar' => 'avatar.jpg',
             'status' => 0,
         ] );
         DB::table( 'users' )->insert( [
             'name' => 'Pierre',
             'email' => 'pierre@pierre.com',
-            'password' => bcrypt( 'motdepasse123' ),
+            'password' => bcrypt( 'password123' ),
             'avatar' => 'avatar.jpg',
             'status' => 0,
         ] );
         DB::table( 'users' )->insert( [
             'name' => 'Paul',
             'email' => 'paul@paul.com',
-            'password' => bcrypt( 'motdepasse123' ),
+            'password' => bcrypt( 'password123' ),
             'avatar' => 'avatar.jpg',
             'status' => 0,
         ] );
         DB::table( 'users' )->insert( [
             'name' => 'Jacques',
             'email' => 'jacques@jacques.com',
-            'password' => bcrypt( 'motdepasse123' ),
+            'password' => bcrypt( 'password123' ),
             'avatar' => 'avatar.jpg',
             'status' => 0,
         ] );
         DB::table( 'users' )->insert( [
             'name' => 'Aurore',
             'email' => 'aurore@aurore.com',
-            'password' => bcrypt( 'motdepasse123' ),
+            'password' => bcrypt( 'password123' ),
             'avatar' => 'avatar.jpg',
             'status' => 0,
         ] );
