@@ -26,10 +26,11 @@ class Register extends Component {
         auth()->login($user);
         if(Auth::check()){
             $user->status = 1;
+            $user->avatar = 'avatar.jpg';
             $user->save();
         }
 
-        return redirect( route( 'login' ) );
+        return redirect( route( 'dashboard' ) );
     }
 
     public function render() {

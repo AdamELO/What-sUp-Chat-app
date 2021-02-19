@@ -21,7 +21,7 @@ class RegistrationTest extends TestCase
             ->set('form.password', 'password123')
             ->set('form.password_confirmation', 'password123')
             ->call('submitRegister')
-            ->assertRedirect('/login');
+            ->assertRedirect('/dashboard');
         $this->assertTrue(User::whereEmail('test@test.com')->exists());
         $this->assertEquals('test@test.com', auth()->user()->email);
         $this->assertEquals(1, auth()->user()->status);

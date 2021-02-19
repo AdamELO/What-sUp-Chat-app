@@ -20,4 +20,5 @@
 ## other
 - responsive coming soon
 - instant messages are not kept in DB !!! 
+- login exemple : email: alex@alex.com  && pass: password123
 
