@@ -12,6 +12,7 @@
 - npm i
 - composer i 
 - php artisan key:generate
+- php artisan storage:link
 - if edit img doesnt work : php artisan view:cache
 ### .env file
 - set up DB info in the .env file
